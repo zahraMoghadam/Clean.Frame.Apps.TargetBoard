@@ -1,0 +1,36 @@
+﻿@model Clean.Frame.Apps.TargetBoard.Services.Services.Dtos.UnitDto
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form>
+    <input type="hidden" value="@Model?.Id" asp-for="Id" id="unitId" name="Id" />
+    <div class="modal-header">
+        <h5 class="modal-title">ایجاد/ویرایش</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <div class="mb-4">
+                        <label class="form-label" for="name">نام</label>
+                        <input type="text" asp-for="Name" value="@Model?.Name" name="name" id="name" placeholder="نام" class="form-control" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="description" placeholder="توضیحات">توضیحات</label>
+                        <textarea class="form-control" id="description" name="description" asp-for="Description" value="@Model?.Description" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">ذخیره</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+

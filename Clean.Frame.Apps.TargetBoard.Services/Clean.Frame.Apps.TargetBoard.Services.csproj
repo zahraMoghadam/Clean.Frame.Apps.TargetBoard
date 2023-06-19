@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	  <ProjectReference Include="..\Clean.Frame.Apps.TargetBoard.Core\Clean.Frame.Apps.TargetBoard.Core.csproj" />
+    <ProjectReference Include="..\Clean.Frame.Apps.TargetBoard.Data\Clean.Frame.Apps.TargetBoard.Data.csproj" />
+  </ItemGroup>
+
+</Project>

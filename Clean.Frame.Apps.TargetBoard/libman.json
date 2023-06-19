@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "notiflix@3.2.2",
+      "destination": "wwwroot/lib/notiflix/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.1.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@5.15.4",
+      "destination": "wwwroot/lib/fontawesom/"
+    },
+    {
+      "library": "@popperjs/core@2.11.0",
+      "destination": "wwwroot/lib/popper/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "select2@4.1.0-rc.0",
+      "destination": "wwwroot/lib/select2/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "select2-theme-bootstrap4@1.0.0",
+      "destination": "wwwroot/lib/select2-theme-bootstrap4/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables@1.10.21",
+      "destination": "wwwroot/lib/datatables"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables.net-select@1.3.1",
+      "destination": "wwwroot/lib/datatables.net-select/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "datatables.net-responsive@2.2.9",
+      "destination": "wwwroot/lib/datatables.net-responsive/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables.net-colreorder@1.5.2",
+      "destination": "wwwroot/lib/datatables.net-colreorder/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootbox.js@5.5.2",
+      "destination": "wwwroot/lib/bootbox.js/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "notify@0.4.2",
+      "destination": "wwwroot/lib/notify/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "notiflix@3.2.2",
+      "destination": "wwwroot/lib/notiflix"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap4-duallistbox@4.0.2",
+      "destination": "wwwroot/lib/bootstrap4-duallistbox"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "popper.js@2.11.2",
+      "destination": "wwwroot/lib/popper"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "vazirmatn@32.102.0",
+      "destination": "wwwroot/lib/vazirmatn"
+<<<<<<< HEAD
+    },
+    {
+      "provider": "cdnjs",
+      "library": "Chart.js@3.7.1",
+      "destination": "wwwroot/lib/ChartJs"
+=======
+>>>>>>> 0a6f0b3e7ec9e94f1a3a6abe44c288cae77f2015
+    }
+  ]
+}

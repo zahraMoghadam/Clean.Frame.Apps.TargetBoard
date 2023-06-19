@@ -1,0 +1,45 @@
+﻿@model Clean.Frame.Apps.TargetBoard.Services.Services.Dtos.MainBoardDto
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form name="mainBoardForm" id="mainBoardForm">
+    <input type="hidden" value="@Model?.Id" asp-for="Id" id="id" name="id" />
+    <div class="modal-header">
+        <h5 class="modal-title">ایجاد/ویرایش</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="mb-4">
+                        <label class="form-label" placeholder="سال" for="name">سال</label>
+                        <select asp-items="@Model?.Years" asp-for="Year" value="@Model?.Year" name="year" id="year" placeholder="سال" class="form-select" class=" form-control" data-val-required="لطفا سال را انتخاب نمایید.">
+                            <option value="-1">لطفا انتخاب نمایید!</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="description" placeholder="ماه">ماه</label>
+                        <select asp-items="@Model?.Months" asp-for="Month" value="@Model?.Month" name="month" id="month" placeholder="ماه" class="form-select" class="form-control" data-val-required="لطفا ماه را انتخاب نمایید.">
+                            <option value="-1">لطفا انتخاب نمایید!</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="description" placeholder="واحد">واحد</label>
+                        <select asp-items="@Model?.Units" asp-for="UnitId" value="@Model?.UnitId" name="unitId" id="unitId" placeholder="واحد" class="form-select" class="form-control" data-val-required="لطفا واحد را انتخاب نمایید.">
+                            <option value="-1">لطفا انتخاب نمایید!</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">ذخیره</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+            </div>
+        </div>
+    </div>
+</form>
+

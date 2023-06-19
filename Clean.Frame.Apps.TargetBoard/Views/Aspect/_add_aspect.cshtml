@@ -1,0 +1,47 @@
+﻿@model Clean.Frame.Apps.TargetBoard.Services.Services.Dtos.AspectMainBoardDto
+@{
+    ViewData["Title"] = "ثبت منظر ها";
+}
+
+<form id="aspectForm"  name="aspectForm">
+    <input type="hidden" value="@Model?.Id" asp-for="Id" id="id" name="id" />
+    <input type="hidden" value="@Model?.MainBoardId" asp-for="MainBoardId" id="mainBoardId" name="mainBoardId" />
+    <div class="modal-header">
+        <h5 class="modal-title">ایجاد/ویرایش</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="mb-4">
+                    <label class="form-label" placeholder="عنوان" for="title">عنوان</label>
+                    <input type="text" asp-for="AspectTitle" value="@Model?.AspectTitle" name="aspectTitle" id="aspectTitle" placeholder="عنوان" class="form-control" />
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label" placeholder="وزن" for="weight">وزن</label>
+                    <input type="text" asp-for="AspectWeight" value="@Model?.AspectWeight" name="aspectWeight" id="aspectWeight" placeholder="وزن" class="form-control" />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="score" placeholder="امتیاز">امتیاز</label>
+                    <input type="text" class="form-control" id="aspectScore" name="aspectScore" asp-for="AspectScore" placeholder="امتیاز" value="@Model?.AspectScore" />
+
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="progress" placeholder=" پیشرفت">پیشرفت </label>
+                    <input type="text" class="form-control" id="aspectProgress" name="aspectProgress" asp-for="AspectProgress" placeholder="پیشرفت" value="@Model?.AspectProgress" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto m-2">
+                    <button type="submit"   id="saveAspect" class="btn btn-primary">ذخیره</button>
+                    <button type="button" id="eee" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+

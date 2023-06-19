@@ -1,0 +1,114 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" dir="rtl" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>کنترل پنل مدیریت اهداف</title>
+
+    <!--Control Panel -->
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.rtl.css" />
+    <link href="~/lib/fontawesom/css/all.css" rel="stylesheet" />
+    <!--Vazirmatn font -->
+    <link href="~/lib/vazirmatn/Vazirmatn-font-face.min.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap4.min.css" asp-append-version="true" />
+    <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" asp-append-version="true" />
+    <!-- Select2 -->
+    <link href="~/lib/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="~/lib/select2-theme-bootstrap4/dist/select2-bootstrap.min.css" rel="stylesheet" />
+    <!--Notiflix -->
+    <link href="~/lib/notiflix/dist/notiflix-3.2.2.min.css" rel="stylesheet" rel="stylesheet" />
+    <!--Notify -->
+    <link href="~/lib/notify/styles/metro/notify-metro.min.css" rel="stylesheet" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+
+<body class="d-flex flex-column h-100" style="overflow-x: hidden !important;">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">مدیریت تابلو اهداف</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="ControlPanel" asp-action="Index">مدیریت تابلو اهداف</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Unit" asp-action="Index">لیست واحدها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="MainBoard" asp-action="Index">لیست برد اهداف </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">نمایش تابلو اهداف</a>
+                        </li>
+                    </ul>
+                    @if (User.Identity!.IsAuthenticated)
+                    {
+                        <form class="d-flex form-inline" asp-area="Identity" asp-page="/Account/Logout">
+                            <button type="submit" class="nav-link btn btn-link text-wrap">خروج<i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                        </form>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+
+    <main class="flex-shrink-0 mt-5">
+        <div class="container mt-5">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">پلتفرم کارخانه هوشمند ایریسا</span>
+        </div>
+    </footer>
+
+    <div id="overlay"></div>
+
+    @RenderBody()
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib-ext/lodash.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Data Tables -->
+    <script src="~/lib/datatables/js/jquery.dataTables.js" asp-append-version="true"></script>
+    <script src="~/lib/datatables.net-select/dataTables.select.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js" asp-append-version="true"></script>
+    <script src="~/lib/datatables.net-responsive/js/dataTables.responsive.js"></script>
+    <!-- Select2 -->
+    <script src="~/lib/select2/dist/js/select2.full.min.js"></script>
+    <!--notiflix -->
+    <script src="~/lib/notiflix/dist/notiflix-3.2.2.min.js"></script>
+    <script src="~/lib/notiflix/dist/notiflix-confirm-aio-3.2.2.min.js"></script>
+    <!--Notify -->
+    <script src="~/lib/notify/notify.js"></script>
+    <!-- BootBox -->
+    <script src="~/lib/bootbox.js/bootbox.min.js"></script>
+    <script src="~/js/site.js"></script>
+    
+<!-- Lodash -->
+<script src="~/lib-ext/lodash.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Style", required: false)
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+﻿@model MainBoardViewModel
+
+
+
+<div class="card">
+    <div class="card-header">
+        <h6 class="card-title">لیست منظر ها</h6>
+        <div class="card-tools">
+        </div>
+    </div>
+    <div class="card-body p-3">
+        <div class="row border-bottom border-bottom-2 border-light m-1">
+            <div class="col-12">
+                <a id="getNewForm" value="اضافه کردن" class="btn btn-success float-left ml-1 m-2"><i class=" fas fa-pencil-alt m-2"></i>اضافه کردن</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table id="AspectTable" class="table table-striped projects">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@section JavaScript
+{
+     <script src="~/js/aspect.js"></script>
+}

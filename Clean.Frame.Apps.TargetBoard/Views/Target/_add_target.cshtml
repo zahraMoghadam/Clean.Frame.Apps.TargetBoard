@@ -1,0 +1,58 @@
+﻿@model Clean.Frame.Apps.TargetBoard.Services.Services.Dtos.TargetDto
+@{
+    ViewData["Title"] = "اهداف";
+}
+<form id="targetForm" name="targetForm">
+    <input type="hidden" value="@Model?.Id" asp-for="Id" id="id" name="id" />
+    <input type="hidden" value="@Model?.AspectId" asp-for="AspectId" id="aspectId" name="aspectId" />
+    <div class="modal-header">
+        <h5 class="modal-title">ایجاد/ویرایش</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="mb-4">
+                    <label class="form-label" placeholder="عنوان" for="title">عنوان</label>
+                    <input type="text" asp-for="Title" value="@Model?.Title" name="title" id="title" placeholder="عنوان" class="form-control" />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="score" placeholder="امتیاز">امتیاز</label>
+                    <input type="text" class="form-control" id="score" name="score" asp-for="Score" placeholder="امتیاز" value="@Model?.Score" />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="progress" placeholder=" پیشرفت">پیشرفت </label>
+                    <input type="text" class="form-control" id="progress" name="progress" asp-for="Progress" placeholder="پیشرفت" value="@Model?.Progress" />
+                </div>
+                <div class="mb-4">
+                    <label class="form-label" for="progress" placeholder=" پیغام ها ">پیغام ها </label>
+                    @if (!string.IsNullOrEmpty(Model?.Message))
+                    {
+                        {
+                            int index = 0;
+                            @foreach (var message in Model.Messages)
+                            {
+                                @if (!string.IsNullOrEmpty(message))
+                                {
+                                    <input type="text" class="form-control targetMessages m-2" asp-for="Messages[index]" value="@message" name="Messages[@index]" />
+                                }
+                                index++;
+                            }
+                        }
+                    }
+                    
+                    <div id="divMessages">
+                        <i class="fa fa-plus text-success" id="addMessages"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto m-2">
+                    <button type="submit" id="saveTarget" class="btn btn-primary">ذخیره</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

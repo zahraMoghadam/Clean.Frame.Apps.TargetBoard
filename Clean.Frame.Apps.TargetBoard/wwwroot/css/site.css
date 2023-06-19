@@ -1,0 +1,106 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: Vazirmatn;
+    font-size: 0.9rem;
+    margin-bottom: 60px;
+    direction: rtl;
+    font-size: 1.1rem;overflow-x: hidden !important;
+}
+table.dataTable {
+    width:100% !important;
+}
+    table.dataTable td, table.dataTable th {
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        border: 1px solid #ebedf3;
+        text-align: center;
+    }
+
+.navbar-brand img {
+    width:100px;
+}
+html {
+    font-family: Vazirmatn !important;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Vazirmatn !important;
+    margin-bottom: 60px;
+}
+
+.row > * {
+    padding-left: calc(var(--bs-gutter-x) * .25);
+    padding-right: calc(var(--bs-gutter-x) * .25);
+}
+
+hr {
+    margin: 0.5rem 0;
+}
+
+.target-block {
+    cursor: pointer;
+}
+
+#detailsModal .modal-body {
+    font-size: 2em;
+}
+
+    #detailsModal .modal-body button {
+        font-size: 0.8em;
+    }
+.bootbox-close-button {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    border-radius: 5px;
+    border: none;
+}
+
+.table td.fit,
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: progress;
+}
+
+​

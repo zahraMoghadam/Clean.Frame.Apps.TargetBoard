@@ -1,0 +1,55 @@
+﻿@model HomeViewModel
+@inject IStringLocalizer<MainBoardController> _localizer
+
+@{
+    ViewData["Title"] = "تابلوی اهداف";
+    Layout = "_MainLayout";
+}
+
+@section Scripts
+{
+<script src="~/js/index.js" asp-append-version="true"></script>
+}
+
+<div class="row m-2">
+</div>
+<div class="hstack gap-3">
+
+    <div class="bg-info p-2 border rounded">@_localizer["Goal achievement rate higher than 110%"]</div>
+    <div class="bg-success p-2 border rounded text-white">@_localizer["Goal achievement rate between 90% to 110%"]</div>
+    <div class="bg-warning p-2 border rounded">@_localizer["Goal achievement rate between 70% to 90%"]</div>
+    <div class="bg-danger p-2 border rounded text-white">@_localizer["Goal achievement rate below 70%"]</div>
+    <div class="bg-light p-2 border rounded">@_localizer["It is not time to monitor the target"]</div>
+    
+
+    <div class="vr"></div>
+
+    <label for="year">@_localizer["year"]:</label>
+    <select asp-items="@Model?.Years" placeholder="سال" data-val-required="سال">
+    </select>
+    <label for="boardMonth">@_localizer["month"]:</label>
+    <select asp-items="@Model?.Months" id="boardMonth" placeholder="ماه" data-val-required="ماه">
+    </select>
+    @if (User.Identity!.IsAuthenticated)
+    {<div class=" px-4 ms-auto">
+         <a asp-action="Index" class="btn btn-outline-primary" asp-controller="Controlpanel">کنترل پنل<i class="fa fa-cog" aria-hidden="true"></i></a>
+     </div>
+    }
+</div>
+
+<div id="wrapper"></div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@_localizer["close"]"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
